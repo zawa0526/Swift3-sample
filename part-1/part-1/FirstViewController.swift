@@ -10,6 +10,12 @@ import UIKit
 
 class FirstViewController: UIViewController {
 
+    @IBAction func tapGreen(_ sender: Any) {
+        view.backgroundColor = UIColor.green
+    }
+    @IBAction func tapWhite(_ sender: Any) {
+        view.backgroundColor = UIColor.white
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
