@@ -22,7 +22,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // テスト
         // スクロールフィールドの領域を指定
         let scrollFrame = CGRect(x: 0, y: 20, width: view.frame.width, height: view.frame.height-20)
         myScrollView.frame = scrollFrame
