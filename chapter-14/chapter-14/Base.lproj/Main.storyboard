@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Ddf-CQ-7WG">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--スタート-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="chapter_14" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kin-K4-Soo">
+                                <rect key="frame" x="186" y="164" width="73" height="30"/>
+                                <state key="normal" title="Go to Frog"/>
+                                <connections>
+                                    <segue destination="SWz-nT-iCB" kind="presentation" id="9Im-Ub-xzz"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AdA-wY-5Id">
+                                <rect key="frame" x="116" y="214" width="77" height="30"/>
+                                <state key="normal" title="森が見たい"/>
+                                <connections>
+                                    <action selector="goToTreePage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bZg-I3-ikp"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aYW-vV-uyP">
+                                <rect key="frame" x="156" y="429" width="62" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="山シーン"/>
+                                <connections>
+                                    <segue destination="cQY-cx-4cW" kind="show" id="gWB-jk-T4s"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="slv-lp-Qgk">
+                                <rect key="frame" x="156" y="333" width="62" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="海シーン"/>
+                                <connections>
+                                    <segue destination="oru-yz-Xxm" kind="show" id="TcX-y1-TMf"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="kin-K4-Soo" secondAttribute="trailing" constant="100" id="CKp-Sx-rLi"/>
+                            <constraint firstItem="AdA-wY-5Id" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="150" id="IxX-sv-Lc4"/>
+                            <constraint firstItem="kin-K4-Soo" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="100" id="a7N-gT-agd"/>
+                            <constraint firstItem="AdA-wY-5Id" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="100" id="uOZ-PT-Sbj"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="スタート" id="hBq-h6-EXb"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="972" y="37.331334332833585"/>
+        </scene>
+        <!--海で遊ぼう-->
+        <scene sceneID="A1h-X9-tf1">
+            <objects>
+                <viewController id="oru-yz-Xxm" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gZl-43-p7J"/>
+                        <viewControllerLayoutGuide type="bottom" id="ztX-IQ-wqc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5o4-AY-luZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.14048936631944445" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="海で遊ぼう" id="TyP-po-6St"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mly-ak-9mH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1910" y="-237"/>
+        </scene>
+        <!--Frog-->
+        <scene sceneID="sfa-41-o9k">
+            <objects>
+                <viewController title="Frog" id="SWz-nT-iCB" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="E0f-hY-rQo"/>
+                        <viewControllerLayoutGuide type="bottom" id="PKX-UK-GrF"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wpp-Vn-ibY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="frog" translatesAutoresizingMaskIntoConstraints="NO" id="gwB-ZH-ftE">
+                                <rect key="frame" x="25" y="122" width="189" height="190"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2fh-ev-z2w">
+                                <rect key="frame" x="157" y="120" width="102" height="30"/>
+                                <state key="normal" title="Go back Home"/>
+                                <connections>
+                                    <segue destination="jFl-Du-MBM" kind="unwind" unwindAction="comeHomeWithSegue:" id="8xV-Bu-i0p"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.56992862329954486" green="0.77576504810880142" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="2fh-ev-z2w" firstAttribute="top" secondItem="E0f-hY-rQo" secondAttribute="bottom" constant="100" id="1yB-P3-fTO"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="2fh-ev-z2w" secondAttribute="trailing" constant="100" id="hoS-e1-ahQ"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nuf-rW-EDA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="jFl-Du-MBM" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="852" y="751"/>
+        </scene>
+        <!--山で遊ぼう-->
+        <scene sceneID="rKd-LA-kE3">
+            <objects>
+                <viewController id="cQY-cx-4cW" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="RSB-2t-bKP"/>
+                        <viewControllerLayoutGuide type="bottom" id="dSc-2a-hp4"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="A3j-Pc-wXa">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.0" green="0.3378634982638889" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="山で遊ぼう" id="3pT-xA-2Hc"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ftc-Wl-7n2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1910" y="501"/>
+        </scene>
+        <!--Tree Page View Controller-->
+        <scene sceneID="gP0-DS-w3I">
+            <objects>
+                <viewController storyboardIdentifier="treePage" id="Fsz-bz-gTZ" customClass="TreePageViewController" customModule="chapter_14" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="K6R-0Z-ZTo"/>
+                        <viewControllerLayoutGuide type="bottom" id="BcE-99-s1I"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="H4X-mq-ojD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tree-a" translatesAutoresizingMaskIntoConstraints="NO" id="GxH-Eb-DHg">
+                                <rect key="frame" x="33" y="139" width="187" height="189"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tzM-H7-ZRW">
+                                <rect key="frame" x="141" y="318" width="92" height="30"/>
+                                <state key="normal" title="ホームに戻る"/>
+                                <connections>
+                                    <action selector="backToHome:" destination="Fsz-bz-gTZ" eventType="touchUpInside" id="7aT-hc-Nq2"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.52313910590277779" green="1" blue="0.37266710069444442" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="tzM-H7-ZRW" firstAttribute="centerX" secondItem="H4X-mq-ojD" secondAttribute="centerX" id="lTD-6D-2hd"/>
+                            <constraint firstItem="tzM-H7-ZRW" firstAttribute="centerY" secondItem="H4X-mq-ojD" secondAttribute="centerY" id="rVy-qg-8yH"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wId-GR-9jN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="61.600000000000001" y="750.67466266866575"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="lDl-aa-nr6">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Ddf-CQ-7WG" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="whx-kX-MzT">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="d0s-Ok-GAF"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mMF-K6-zxg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="37.331334332833585"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="frog" width="123" height="120"/>
+        <image name="tree-a" width="87" height="142"/>
+    </resources>
+</document>
