@@ -14,6 +14,7 @@
 		2FEFF43D1F444D040057B634 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2FEFF43B1F444D040057B634 /* LaunchScreen.storyboard */; };
 		2FEFF4451F4452890057B634 /* AzarashiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FEFF4441F4452890057B634 /* AzarashiViewController.swift */; };
 		2FEFF4471F4457160057B634 /* AnimationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FEFF4461F4457160057B634 /* AnimationsViewController.swift */; };
+		2FEFF4491F4463E20057B634 /* JogBoyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FEFF4481F4463E20057B634 /* JogBoyViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		2FEFF43E1F444D040057B634 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2FEFF4441F4452890057B634 /* AzarashiViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AzarashiViewController.swift; sourceTree = "<group>"; };
 		2FEFF4461F4457160057B634 /* AnimationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationsViewController.swift; sourceTree = "<group>"; };
+		2FEFF4481F4463E20057B634 /* JogBoyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JogBoyViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +44,7 @@
 		2FEFF4261F444D040057B634 = {
 			isa = PBXGroup;
 			children = (
+				2FEFF4481F4463E20057B634 /* JogBoyViewController.swift */,
 				2FEFF4311F444D040057B634 /* 15-animation */,
 				2FEFF4301F444D040057B634 /* Products */,
 			);
@@ -146,6 +149,7 @@
 				2FEFF4351F444D040057B634 /* ViewController.swift in Sources */,
 				2FEFF4331F444D040057B634 /* AppDelegate.swift in Sources */,
 				2FEFF4451F4452890057B634 /* AzarashiViewController.swift in Sources */,
+				2FEFF4491F4463E20057B634 /* JogBoyViewController.swift in Sources */,
 				2FEFF4471F4457160057B634 /* AnimationsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

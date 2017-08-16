@@ -95,11 +95,31 @@
                         <segue destination="VWL-ii-25F" kind="relationship" relationship="viewControllers" id="tQV-p7-Nte"/>
                         <segue destination="Zuj-tF-i5m" kind="relationship" relationship="viewControllers" id="xtR-rL-DGZ"/>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="QE4-jw-izS"/>
+                        <segue destination="XSv-Ut-FOd" kind="relationship" relationship="viewControllers" id="nZl-tJ-gmg"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mgl-wl-frh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1202" y="-15"/>
+        </scene>
+        <!--JogBoy-->
+        <scene sceneID="FOb-xJ-ONc">
+            <objects>
+                <viewController id="XSv-Ut-FOd" customClass="JogBoyViewController" customModule="_5_animation" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fXN-RB-LMc"/>
+                        <viewControllerLayoutGuide type="bottom" id="Qr0-Au-jxb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="uql-Jb-NyN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="JogBoy" id="hFD-Jx-jpM"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qQi-1j-G4n" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-988" y="640"/>
         </scene>
         <!--Car-->
         <scene sceneID="tne-QT-ifu">
