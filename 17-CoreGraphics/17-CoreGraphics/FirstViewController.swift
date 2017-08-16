@@ -28,6 +28,7 @@ class FirstViewController: UIViewController {
         
         let image = UIGraphicsGetImageFromCurrentImageContext()
         // 終了
+        UIGraphicsEndImageContext()
         return image!
     }
     
@@ -46,6 +47,29 @@ class FirstViewController: UIViewController {
         
         let image = UIGraphicsGetImageFromCurrentImageContext()
         // 終了
+        UIGraphicsEndImageContext()
+        return image!
+    }
+    
+    func drawLine() -> UIImage {
+        let size = view.bounds.size
+        // 開始
+        UIGraphicsBeginImageContextWithOptions(size, false, 1.0)
+        
+        let arcPath = UIBezierPath(
+            arcCenter: CGPoint(x: view.center.x, y: 100),  // 中心
+            radius: 80.0,  // 半径
+            startAngle: 0.0,  // 開始角度（0が3時)
+            endAngle: CGFloat(Double.pi*5/3),  // 終了角度(π*5/3 = 300度)
+            clockwise: true // 時計回り
+        )
+        arcPath.lineWidth = 40
+        arcPath.lineCapStyle = .round // .butt .round .square
+        arcPath.stroke()
+        
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        // 終了
+        UIGraphicsEndImageContext()
         return image!
     }
 
@@ -61,6 +85,10 @@ class FirstViewController: UIViewController {
         let roundView = UIImageView(image: roundImage)
         roundView.center = view.center
         view.addSubview(roundView)
+        
+        let lineImage = drawLine()
+        let lineView = UIImageView(image: lineImage)
+        view.addSubview(lineView)
     }
 
     override func didReceiveMemoryWarning() {
