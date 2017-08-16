@@ -13,6 +13,7 @@
 		2FEFF43A1F444D040057B634 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2FEFF4391F444D040057B634 /* Assets.xcassets */; };
 		2FEFF43D1F444D040057B634 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2FEFF43B1F444D040057B634 /* LaunchScreen.storyboard */; };
 		2FEFF4451F4452890057B634 /* AzarashiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FEFF4441F4452890057B634 /* AzarashiViewController.swift */; };
+		2FEFF4471F4457160057B634 /* AnimationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FEFF4461F4457160057B634 /* AnimationsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		2FEFF43C1F444D040057B634 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2FEFF43E1F444D040057B634 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2FEFF4441F4452890057B634 /* AzarashiViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AzarashiViewController.swift; sourceTree = "<group>"; };
+		2FEFF4461F4457160057B634 /* AnimationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 				2FEFF4361F444D040057B634 /* Main.storyboard */,
 				2FEFF4391F444D040057B634 /* Assets.xcassets */,
 				2FEFF4441F4452890057B634 /* AzarashiViewController.swift */,
+				2FEFF4461F4457160057B634 /* AnimationsViewController.swift */,
 				2FEFF43B1F444D040057B634 /* LaunchScreen.storyboard */,
 				2FEFF43E1F444D040057B634 /* Info.plist */,
 			);
@@ -143,6 +146,7 @@
 				2FEFF4351F444D040057B634 /* ViewController.swift in Sources */,
 				2FEFF4331F444D040057B634 /* AppDelegate.swift in Sources */,
 				2FEFF4451F4452890057B634 /* AzarashiViewController.swift in Sources */,
+				2FEFF4471F4457160057B634 /* AnimationsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

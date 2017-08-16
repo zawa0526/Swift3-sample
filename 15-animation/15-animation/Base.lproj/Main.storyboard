@@ -13,7 +13,7 @@
         <!--Item 2-->
         <scene sceneID="DXo-zj-fIF">
             <objects>
-                <viewController id="Zuj-tF-i5m" sceneMemberID="viewController">
+                <viewController id="Zuj-tF-i5m" customClass="AnimationsViewController" customModule="_5_animation" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="1xV-xm-hUe"/>
                         <viewControllerLayoutGuide type="bottom" id="xlj-yD-ehh"/>
@@ -22,10 +22,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="VSb-xU-0Wv" appends="YES" id="6ed-ue-sDp"/>
+                        </connections>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 2" id="VG1-pJ-PAR"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l98-6P-8eZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="VSb-xU-0Wv">
+                    <connections>
+                        <action selector="tapView:" destination="Zuj-tF-i5m" id="oOa-Qq-eed"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-268" y="-16"/>
         </scene>
