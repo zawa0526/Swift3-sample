@@ -56,15 +56,25 @@ class FirstViewController: UIViewController {
         // 開始
         UIGraphicsBeginImageContextWithOptions(size, false, 1.0)
         
+        let center = CGPoint(x: view.center.x, y: 100)
+        
         let arcPath = UIBezierPath(
-            arcCenter: CGPoint(x: view.center.x, y: 100),  // 中心
+            arcCenter: center,  // 中心
             radius: 80.0,  // 半径
-            startAngle: 0.0,  // 開始角度（0が3時)
-            endAngle: CGFloat(Double.pi*5/3),  // 終了角度(π*5/3 = 300度)
+            startAngle: CGFloat(-Double.pi/2),  // 開始角度（0が3時)
+            endAngle: CGFloat(Double.pi*3/4),  // 終了角度(π*5/3 = 300度)
             clockwise: true // 時計回り
         )
-        arcPath.lineWidth = 40
-        arcPath.lineCapStyle = .round // .butt .round .square
+        
+        // 中心までパス追加
+        arcPath.addLine(to: center)
+        // 閉じる（開始点につなぐ）
+        arcPath.close()
+
+        UIColor.cyan.setFill()
+        arcPath.fill()
+        arcPath.lineWidth = 5
+        arcPath.lineCapStyle = .butt // .butt .round .square
         arcPath.stroke()
         
         let image = UIGraphicsGetImageFromCurrentImageContext()
