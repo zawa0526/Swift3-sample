@@ -36,6 +36,17 @@ class FirstViewController: UIViewController {
         print("ハロー", tagNo!)
     }
 
+    @IBAction func doubleTapFlower(_ sender: UITapGestureRecognizer) {
+        let flower = sender.view!
+        
+        // 変形していないかどうか
+        if flower.transform.isIdentity {
+            flower.transform = CGAffineTransform(scaleX: 3, y: 3)
+        } else {
+            flower.transform = .identity
+        }
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
