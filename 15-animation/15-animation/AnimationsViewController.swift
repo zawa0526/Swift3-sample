@@ -15,8 +15,8 @@ class AnimationsViewController: UIViewController {
         let flower = UIImageView(image: UIImage(named: "flower"))
         flower.alpha = 0
         
-        // 0.2倍サイズにする
-        let scaleTransform = CGAffineTransform(scaleX: 0.2, y: 0.2)
+        // 2倍サイズにする
+        let scaleTransform = CGAffineTransform(scaleX: 2, y: 2)
         // -π/2回転する
         let rotationTransform = CGAffineTransform(rotationAngle: CGFloat(Double.pi/2))
         // トランスフォームを足し合わせる
@@ -28,14 +28,27 @@ class AnimationsViewController: UIViewController {
         view.addSubview(flower)
         
         UIView.animate(
-            withDuration: 1.0,
+            withDuration: 2.0,
             delay: 0,
             options: [.curveEaseInOut],
             animations: {
                 flower.alpha = 1.0
-                flower.transform = .identity
         },
-            completion: nil)
+            completion: {(finished:Bool) in
+                self.fadeoutAndRemove(flower)
+        })
+    }
+    
+    func fadeoutAndRemove(_ view: UIView) {
+        UIView.animate(
+            withDuration: 2.0,
+            delay: 3.0,
+            options: UIViewAnimationOptions(),
+            animations: {
+                view.alpha = 0.0
+        }, completion: {(finished: Bool) in
+            view.removeFromSuperview()
+        })
     }
     
     override func viewDidLoad() {
