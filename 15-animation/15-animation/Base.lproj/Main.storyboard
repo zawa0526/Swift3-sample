@@ -32,7 +32,7 @@
         <!--Item 1-->
         <scene sceneID="KwG-zl-vSl">
             <objects>
-                <viewController id="VWL-ii-25F" sceneMemberID="viewController">
+                <viewController id="VWL-ii-25F" customClass="AzarashiViewController" customModule="_5_animation" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="rv9-1y-KuA"/>
                         <viewControllerLayoutGuide type="bottom" id="oOv-Uo-HeL"/>
@@ -40,13 +40,38 @@
                     <view key="view" contentMode="scaleToFill" id="dP5-ur-YAg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="azarashi" translatesAutoresizingMaskIntoConstraints="NO" id="OYr-eb-GA3">
+                                <rect key="frame" x="16" y="20" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="3nW-gm-SCZ"/>
+                                    <constraint firstAttribute="width" constant="150" id="cln-p3-WiV"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="OYr-eb-GA3" firstAttribute="leading" secondItem="dP5-ur-YAg" secondAttribute="leadingMargin" id="TUv-Fv-EPN"/>
+                            <constraint firstItem="OYr-eb-GA3" firstAttribute="top" secondItem="rv9-1y-KuA" secondAttribute="bottom" id="v9s-gJ-9w2"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="sxV-u3-zLg" appends="YES" id="MdY-6u-bRl"/>
+                        </connections>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 1" id="9f1-bt-jsl"/>
+                    <connections>
+                        <outlet property="azarashi" destination="OYr-eb-GA3" id="1l5-HE-I8Y"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ViD-iJ-Iaw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="sxV-u3-zLg">
+                    <connections>
+                        <action selector="tapView:" destination="VWL-ii-25F" id="80b-TD-8hb"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-250" y="-692"/>
+            <point key="canvasLocation" x="-250.40000000000001" y="-692.20389805097454"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="XE8-k5-Xuy">
@@ -104,6 +129,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="azarashi" width="98" height="97"/>
         <image name="carR" width="121" height="54"/>
     </resources>
 </document>
