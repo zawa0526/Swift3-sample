@@ -57,6 +57,58 @@ class FirstViewController: UIViewController {
         print(msg)
     }
     
+    @IBAction func showActionSheet(_ sender: Any) {
+        // アクションシートのインスタンスをつくる
+        let actionSheet = UIAlertController(
+            title: "タイトル",
+            message: "メッセージ文",
+            preferredStyle: .actionSheet)
+        
+        actionSheet.addAction(
+            UIAlertAction(title: "ボタン1だよ",
+                          style: .default,
+                          handler: {
+                            (action) -> Void in
+                            self.hello(action.title!)
+            })
+        )
+        actionSheet.addAction(
+            UIAlertAction(title: "ボタン2だよ",
+                          style: .default,
+                          handler: {
+                            (action) -> Void in
+                            self.hello(action.title!)
+            })
+        )
+        // キャンセル
+        actionSheet.addAction(
+            UIAlertAction(title: "キャンセル",
+                          style: .cancel,
+                          handler: {
+                            (action) -> Void in
+                            self.hello(action.title!)
+            })
+        )
+        // 赤色のボタン
+        actionSheet.addAction(
+            UIAlertAction(title: "削除します",
+                          style: .destructive,
+                          handler: {
+                            (action) -> Void in
+                            self.hello(action.title!)
+            })
+        )
+        
+        self.present(
+            actionSheet,
+            animated: true,
+            completion: {
+                print("アクションシート表示")
+        })
+    }
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.

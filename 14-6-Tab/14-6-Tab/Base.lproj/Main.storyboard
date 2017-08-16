@@ -41,10 +41,19 @@
                                     <action selector="showAlert:" destination="9pv-A4-QxB" eventType="touchUpInside" id="k9c-41-ZOB"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kIm-qb-Eph">
+                                <rect key="frame" x="126" y="140" width="123" height="30"/>
+                                <state key="normal" title="アクションシート"/>
+                                <connections>
+                                    <action selector="showActionSheet:" destination="9pv-A4-QxB" eventType="touchUpInside" id="YEU-eR-e0m"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="kIm-qb-Eph" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="2Vd-5l-fAC"/>
                             <constraint firstAttribute="centerX" secondItem="KQZ-1w-vlD" secondAttribute="centerX" id="6BV-lF-sBN"/>
+                            <constraint firstItem="kIm-qb-Eph" firstAttribute="top" secondItem="LoB-zZ-vQx" secondAttribute="bottom" constant="20" id="Bp5-zZ-cnw"/>
                             <constraint firstItem="A5M-7J-77L" firstAttribute="top" secondItem="KQZ-1w-vlD" secondAttribute="bottom" constant="8" symbolic="YES" id="cfb-er-3JN"/>
                             <constraint firstItem="A5M-7J-77L" firstAttribute="centerX" secondItem="KQZ-1w-vlD" secondAttribute="centerX" id="e1l-AV-tCB"/>
                             <constraint firstItem="LoB-zZ-vQx" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="eJN-cc-8Th"/>
