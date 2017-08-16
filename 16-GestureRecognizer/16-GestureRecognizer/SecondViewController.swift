@@ -10,6 +10,8 @@ import UIKit
 
 class SecondViewController: UIViewController {
 
+    @IBOutlet weak var tombo: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor(hue: kakudo/360, saturation: 1.0, brightness: 1.0, alpha: 1.0)
@@ -43,9 +45,24 @@ class SecondViewController: UIViewController {
         } else if kakudo > 360{
             kakudo -= 360
         }
-                
+        
         let color = UIColor(hue: kakudo/360, saturation: 1.0, brightness: 1.0, alpha: 1.0)
         view.backgroundColor = color
+    }
+    
+    // 最後の回転角度を保存しておく
+    var lastRotation: CGFloat = 0.0
+    @IBAction func rotateTombo(_ sender: UIRotationGestureRecognizer) {
+        switch  sender.state {
+        case .began:
+            sender.rotation = lastRotation
+        case .changed:
+            tombo.transform = CGAffineTransform(rotationAngle: sender.rotation)
+        case .ended:
+            lastRotation = sender.rotation
+        default:
+            break
+        }
     }
 }
 

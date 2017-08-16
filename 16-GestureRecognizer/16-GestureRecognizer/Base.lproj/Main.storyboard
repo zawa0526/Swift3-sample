@@ -101,9 +101,13 @@
                         </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="8oJ-VQ-uc8" appends="YES" id="Yzf-xn-nLg"/>
+                            <outletCollection property="gestureRecognizers" destination="lrz-EN-Ixu" appends="YES" id="iEB-E4-H7k"/>
                         </connections>
                     </view>
                     <tabBarItem key="tabBarItem" title="Second" image="second" id="cPa-gy-q4n"/>
+                    <connections>
+                        <outlet property="tombo" destination="WzG-Ph-gqh" id="4qF-b5-iWb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
                 <panGestureRecognizer minimumNumberOfTouches="1" id="R2u-uN-7wj">
@@ -116,6 +120,11 @@
                         <action selector="draggingOnView:" destination="8rJ-Kc-sve" id="DFO-ER-lSY"/>
                     </connections>
                 </panGestureRecognizer>
+                <rotationGestureRecognizer id="lrz-EN-Ixu">
+                    <connections>
+                        <action selector="rotateTombo:" destination="8rJ-Kc-sve" id="jKj-tK-70h"/>
+                    </connections>
+                </rotationGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="750" y="360"/>
         </scene>
