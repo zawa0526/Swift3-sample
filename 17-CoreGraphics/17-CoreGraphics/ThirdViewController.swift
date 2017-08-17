@@ -9,11 +9,41 @@
 import UIKit
 
 class ThirdViewController: UIViewController {
+    
+    func drawPathImage() -> UIImage {
+        let size = view.bounds.size
+        UIGraphicsBeginImageContextWithOptions(size, false, 1.0)
+        UIColor.lightGray.setFill()
+        
+        let boxRect = CGRect(x: 100, y: 100, width: 150, height: 100)
+        let boxPath = UIBezierPath(rect: boxRect)
+        boxPath.lineWidth = 2.0
+        boxPath.fill()
+        boxPath.stroke()
+        
+        let curvePath = UIBezierPath()
+        let pt0 = CGPoint(x: 80, y: 300)
+        let pt1 = CGPoint(x: 300, y: 500)
+        let cPt0 = CGPoint(x: 400, y: 300)
+        let cPt1 = CGPoint(x: 100, y: 600)
+        curvePath.move(to: pt0)
+        curvePath.addCurve(to: pt1, controlPoint1: cPt0, controlPoint2: cPt1)
+        curvePath.lineWidth = 2.0
+        curvePath.fill()
+        curvePath.stroke()
+        
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        
+        return image!
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        let drawImage = drawPathImage()
+        let drawView = UIImageView(image: drawImage)
+        view.addSubview(drawView)
     }
 
     override func didReceiveMemoryWarning() {
