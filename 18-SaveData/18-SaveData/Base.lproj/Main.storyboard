@@ -127,29 +127,56 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Second View" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="zEq-FU-wV5">
-                                <rect key="frame" x="83" y="313" width="209.5" height="41.5"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="36"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loaded by SecondViewController" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NDk-cv-Gan">
-                                <rect key="frame" x="80" y="362.5" width="215" height="17"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sdq-mv-Pwg">
+                                <rect key="frame" x="67" y="304" width="62" height="30"/>
+                                <state key="normal" title="読み込む"/>
+                                <connections>
+                                    <action selector="readFromFile:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="dbc-zo-eVw"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="J9E-Ce-AAz">
+                                <rect key="frame" x="67" y="29" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" phoneNumber="YES"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Rma-7p-sfd">
+                                <rect key="frame" x="67" y="342" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Nc-eu-CI2">
+                                <rect key="frame" x="276" y="165" width="31" height="30"/>
+                                <state key="normal" title="保存"/>
+                                <connections>
+                                    <action selector="saveToFile:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="0mm-g7-dE3"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="NDk-cv-Gan" firstAttribute="top" secondItem="zEq-FU-wV5" secondAttribute="bottom" constant="8" symbolic="YES" id="Day-4N-Vmt"/>
-                            <constraint firstItem="NDk-cv-Gan" firstAttribute="centerX" secondItem="zEq-FU-wV5" secondAttribute="centerX" id="JgO-Fn-dHn"/>
-                            <constraint firstAttribute="centerX" secondItem="zEq-FU-wV5" secondAttribute="centerX" id="qqM-NS-xev"/>
-                            <constraint firstAttribute="centerY" secondItem="zEq-FU-wV5" secondAttribute="centerY" id="qzY-Ky-pLD"/>
+                            <constraint firstItem="Rma-7p-sfd" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="EVi-Hn-1Gd"/>
+                            <constraint firstItem="Rma-7p-sfd" firstAttribute="top" secondItem="Sdq-mv-Pwg" secondAttribute="bottom" constant="8" symbolic="YES" id="EXz-40-zOh"/>
+                            <constraint firstItem="Rma-7p-sfd" firstAttribute="trailing" secondItem="2Nc-eu-CI2" secondAttribute="trailing" id="G5C-QH-RDL"/>
+                            <constraint firstItem="2Nc-eu-CI2" firstAttribute="top" secondItem="J9E-Ce-AAz" secondAttribute="bottom" constant="8" id="ODV-Z1-l2I"/>
+                            <constraint firstItem="Sdq-mv-Pwg" firstAttribute="top" secondItem="QS5-Rx-YEW" secondAttribute="top" constant="304" id="W1i-zF-qLI"/>
+                            <constraint firstItem="Sdq-mv-Pwg" firstAttribute="leading" secondItem="J9E-Ce-AAz" secondAttribute="leading" id="a7H-tw-U6Q"/>
+                            <constraint firstItem="Sdq-mv-Pwg" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" constant="51" id="cIV-r3-Nll"/>
+                            <constraint firstItem="2Nc-eu-CI2" firstAttribute="top" secondItem="QS5-Rx-YEW" secondAttribute="top" constant="165" id="cx1-VV-uke"/>
+                            <constraint firstItem="J9E-Ce-AAz" firstAttribute="top" secondItem="L7p-HK-0SC" secondAttribute="bottom" constant="9" id="jTY-bH-jGg"/>
+                            <constraint firstItem="Rma-7p-sfd" firstAttribute="trailing" secondItem="J9E-Ce-AAz" secondAttribute="trailing" id="qjc-Fj-8FO"/>
+                            <constraint firstItem="Sdq-mv-Pwg" firstAttribute="leading" secondItem="Rma-7p-sfd" secondAttribute="leading" id="wyW-Z7-Fqi"/>
+                            <constraint firstItem="Djb-ko-YwX" firstAttribute="top" secondItem="Rma-7p-sfd" secondAttribute="bottom" constant="148" id="xkN-NF-Msm"/>
+                            <constraint firstItem="2Nc-eu-CI2" firstAttribute="top" secondItem="J9E-Ce-AAz" secondAttribute="bottom" constant="8" symbolic="YES" id="xw9-As-J2e"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Second" image="second" id="cPa-gy-q4n"/>
+                    <connections>
+                        <outlet property="textView1" destination="J9E-Ce-AAz" id="ze6-Mn-ePX"/>
+                        <outlet property="textView2" destination="Rma-7p-sfd" id="9ZG-ai-3xY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
