@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2F2C35C71F465BD3000D3079 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F2C35C61F465BD3000D3079 /* ThirdViewController.swift */; };
 		2F5E07C71F45BB83007208E7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F5E07C61F45BB83007208E7 /* AppDelegate.swift */; };
 		2F5E07C91F45BB83007208E7 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F5E07C81F45BB83007208E7 /* FirstViewController.swift */; };
 		2F5E07CB1F45BB83007208E7 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F5E07CA1F45BB83007208E7 /* SecondViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2F2C35C61F465BD3000D3079 /* ThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 		2F5E07C31F45BB83007208E7 /* 18-SaveData.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "18-SaveData.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F5E07C61F45BB83007208E7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2F5E07C81F45BB83007208E7 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -40,6 +42,7 @@
 		2F5E07BA1F45BB83007208E7 = {
 			isa = PBXGroup;
 			children = (
+				2F2C35C61F465BD3000D3079 /* ThirdViewController.swift */,
 				2F5E07C51F45BB83007208E7 /* 18-SaveData */,
 				2F5E07C41F45BB83007208E7 /* Products */,
 			);
@@ -142,6 +145,7 @@
 			files = (
 				2F5E07CB1F45BB83007208E7 /* SecondViewController.swift in Sources */,
 				2F5E07C71F45BB83007208E7 /* AppDelegate.swift in Sources */,
+				2F2C35C71F465BD3000D3079 /* ThirdViewController.swift in Sources */,
 				2F5E07C91F45BB83007208E7 /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -308,6 +312,7 @@
 				2F5E07D91F45BB84007208E7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
