@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -41,28 +42,78 @@
                                     <action selector="tapRead:" destination="9pv-A4-QxB" eventType="touchUpInside" id="8d3-jh-azQ"/>
                                 </connections>
                             </button>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="IEl-v2-U1j">
+                                <rect key="frame" x="79" y="178" width="218" height="31"/>
+                                <connections>
+                                    <action selector="slide:" destination="9pv-A4-QxB" eventType="valueChanged" id="mId-h9-A7C"/>
+                                </connections>
+                            </slider>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ASL-YY-fXP">
+                                <rect key="frame" x="23" y="178" width="32" height="30"/>
+                                <state key="normal" title="save"/>
+                                <connections>
+                                    <action selector="tapSliderSave:" destination="9pv-A4-QxB" eventType="touchUpInside" id="jET-Jc-Rii"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q6r-Ds-OBF">
+                                <rect key="frame" x="24" y="238" width="31" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="read"/>
+                                <connections>
+                                    <action selector="tapSliderRead:" destination="9pv-A4-QxB" eventType="touchUpInside" id="eHF-nt-0PQ"/>
+                                </connections>
+                            </button>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="CFT-cE-TNg">
+                                <rect key="frame" x="81" y="252" width="214" height="2"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </progressView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lvf-sW-TiL">
+                                <rect key="frame" x="359" y="193" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ELo-YF-6Bz">
+                                <rect key="frame" x="348" y="232" width="11" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="ELo-YF-6Bz" firstAttribute="trailing" secondItem="tsR-hK-woN" secondAttribute="trailingMargin" id="2ft-bI-gNP"/>
+                            <constraint firstItem="ELo-YF-6Bz" firstAttribute="top" secondItem="lvf-sW-TiL" secondAttribute="bottom" constant="39" id="49u-QB-ViY"/>
                             <constraint firstItem="eEV-rg-bJo" firstAttribute="centerY" secondItem="LF1-Wu-ihk" secondAttribute="centerY" id="4xy-oz-cJJ"/>
+                            <constraint firstItem="IEl-v2-U1j" firstAttribute="trailing" secondItem="eEV-rg-bJo" secondAttribute="trailing" id="86w-wz-byh"/>
+                            <constraint firstItem="IEl-v2-U1j" firstAttribute="top" secondItem="ASL-YY-fXP" secondAttribute="top" id="HaB-xG-DZi"/>
                             <constraint firstItem="eEV-rg-bJo" firstAttribute="trailing" secondItem="q57-8N-9bd" secondAttribute="trailing" id="KUm-iD-LKE"/>
+                            <constraint firstItem="lvf-sW-TiL" firstAttribute="centerY" secondItem="IEl-v2-U1j" secondAttribute="centerY" id="Kck-Kb-dn3"/>
                             <constraint firstItem="q57-8N-9bd" firstAttribute="centerY" secondItem="cOh-P9-EtG" secondAttribute="centerY" id="M4E-uw-hzi"/>
+                            <constraint firstItem="IEl-v2-U1j" firstAttribute="top" secondItem="LF1-Wu-ihk" secondAttribute="bottom" constant="56" id="NTZ-K3-Fyr"/>
                             <constraint firstItem="cOh-P9-EtG" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" constant="20" id="PEB-F6-0kq"/>
+                            <constraint firstItem="lvf-sW-TiL" firstAttribute="trailing" secondItem="tsR-hK-woN" secondAttribute="trailingMargin" id="PGb-4x-aEk"/>
                             <constraint firstItem="LF1-Wu-ihk" firstAttribute="top" secondItem="cOh-P9-EtG" secondAttribute="bottom" constant="20" id="Tne-rO-gaX"/>
                             <constraint firstItem="cOh-P9-EtG" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="edw-BR-QZd"/>
+                            <constraint firstItem="IEl-v2-U1j" firstAttribute="leading" secondItem="ASL-YY-fXP" secondAttribute="trailing" constant="26" id="gD6-fC-AWa"/>
+                            <constraint firstItem="IEl-v2-U1j" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="tEU-5h-Elr"/>
                             <constraint firstItem="eEV-rg-bJo" firstAttribute="leading" secondItem="LF1-Wu-ihk" secondAttribute="trailing" constant="52" id="vmM-1H-hSn"/>
                             <constraint firstItem="LF1-Wu-ihk" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="wfu-1z-wyX"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="First" image="first" id="acW-dT-cKf"/>
                     <connections>
+                        <outlet property="myProgress" destination="CFT-cE-TNg" id="MiP-i2-wdc"/>
+                        <outlet property="mySlider1" destination="IEl-v2-U1j" id="ndy-kn-s3z"/>
                         <outlet property="mySwitch1" destination="cOh-P9-EtG" id="GXO-W7-fJ1"/>
                         <outlet property="mySwitch2" destination="LF1-Wu-ihk" id="HW4-3q-f4M"/>
+                        <outlet property="progressLabel" destination="ELo-YF-6Bz" id="Pm8-uG-G3t"/>
+                        <outlet property="sliderLabel" destination="lvf-sW-TiL" id="Ej3-D7-ZTW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="750" y="-320"/>
+            <point key="canvasLocation" x="749.60000000000002" y="-320.68965517241384"/>
         </scene>
         <!--Second-->
         <scene sceneID="wg7-f3-ORb">
