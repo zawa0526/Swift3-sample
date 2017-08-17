@@ -49,6 +49,25 @@
             </objects>
             <point key="canvasLocation" x="750" y="-320"/>
         </scene>
+        <!--Item-->
+        <scene sceneID="IT5-j0-ace">
+            <objects>
+                <viewController id="VUG-Lp-RzU" customClass="ThirdViewController" customModule="_7_CoreGraphics" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ojy-Xz-fkA"/>
+                        <viewControllerLayoutGuide type="bottom" id="BzV-gp-MlT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wem-np-XEn">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="HVc-8C-fd9"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AeP-6q-fl8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="129" y="757"/>
+        </scene>
         <!--Second-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
@@ -81,6 +100,7 @@
                     <connections>
                         <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
                         <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
+                        <segue destination="VUG-Lp-RzU" kind="relationship" relationship="viewControllers" id="uhN-Om-IjA"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
