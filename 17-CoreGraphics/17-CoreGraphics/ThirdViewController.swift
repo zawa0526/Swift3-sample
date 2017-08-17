@@ -37,6 +37,38 @@ class ThirdViewController: UIViewController {
         
         return image!
     }
+    
+    func drawOverlapImages() -> UIImage {
+        let size = view.bounds.size
+        UIGraphicsBeginImageContextWithOptions(size, false, 1.0)
+        UIColor.green.setFill()
+        
+        let boxRect = CGRect(x: 80, y: 200, width: 150, height: 150)
+        let boxPath = UIBezierPath(rect: boxRect)
+        
+        let ovalRect1 = CGRect(x: 50, y: 150, width: 150, height: 150)
+        let ovalPath1 = UIBezierPath(ovalIn: ovalRect1)
+        
+        let ovalRect2 = CGRect(x: 120, y: 250, width: 150, height: 150)
+        let ovalPath2 = UIBezierPath(ovalIn: ovalRect2)
+        
+        let drawPath = UIBezierPath()
+        drawPath.append(boxPath)
+        drawPath.append(ovalPath1)
+        drawPath.append(ovalPath2)
+        
+        // 重なりが複数回のときは塗らない
+        drawPath.usesEvenOddFillRule = true
+        drawPath.fill()
+  
+//        stroke()は枠線描画
+//        drawPath.stroke()
+
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        
+        return image!
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,6 +76,9 @@ class ThirdViewController: UIViewController {
         let drawImage = drawPathImage()
         let drawView = UIImageView(image: drawImage)
         view.addSubview(drawView)
+        
+        let drawView2 = UIImageView(image: drawOverlapImages())
+        view.addSubview(drawView2)
     }
 
     override func didReceiveMemoryWarning() {
