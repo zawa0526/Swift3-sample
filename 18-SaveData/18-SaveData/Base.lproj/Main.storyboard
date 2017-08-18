@@ -126,13 +126,67 @@
                     <view key="view" contentMode="scaleToFill" id="ToY-YH-JDs">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wvz-WR-pZg">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <items>
+                                    <barButtonItem title="Cancel" id="Pz0-dl-jXU">
+                                        <connections>
+                                            <action selector="cancel:" destination="cNn-ow-aKJ" id="0g4-xr-Ytc"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="nR0-05-X6h"/>
+                                    <barButtonItem title="Save" id="6eh-R1-Q0O">
+                                        <connections>
+                                            <action selector="saveToFile:" destination="cNn-ow-aKJ" id="CBS-2i-EIv"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ZbC-Ol-mVY">
+                                <rect key="frame" x="16" y="64" width="343" height="546"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="546" id="VyW-oY-MOp"/>
+                                </constraints>
+                                <mutableString key="text">OS、Mac、Apple TV、Apple Watch向けのアプリケーションを開発するためにAppleが作った、
+強固で直感的なプログラミング言語。それがSwiftです。デベロッパのみなさんに、かつてないほどの
+自由を届けられるように設計されています。Swiftは簡単に使えて、しかもオープンソースなので、
+アイデアがある人なら誰でも、画期的なアプリケーションを作ることができます。
+高速で効率の良い言語であるSwiftはリアルタイムのフィードバックを提供し、既存のObjective-Cコードにもシームレスに組み込めます。だからデベロッパのみなさんは、より安全で、より信頼性の高いコードを書くことができ、時間を節約しながら、より豊かなアプリケーション体験を生み出せます。
+OS、Mac、Apple TV、Apple Watch向けのアプリケーションを開発するためにAppleが作った、
+強固で直感的なプログラミング言語。それがSwiftです。デベロッパのみなさんに、かつてないほどの
+自由を届けられるように設計されています。Swiftは簡単に使えて、しかもオープンソースなので、
+アイデアがある人なら誰でも、画期的なアプリケーションを作ることができます。
+高速で効率の良い言語であるSwiftはリアルタイムのフィードバックを提供し、既存のObjective-Cコードにもシームレスに組み込めます。だからデベロッパのみなさんは、より安全で、より信頼性の高いコードを書くことができ、時間を節約しながら、より豊かなアプリケーション体験を生み出せます。
+
+OS、Mac、Apple TV、Apple Watch向けのアプリケーションを開発するためにAppleが作った、
+強固で直感的なプログラミング言語。それがSwiftです。デベロッパのみなさんに、かつてないほどの
+自由を届けられるように設計されています。Swiftは簡単に使えて、しかもオープンソースなので、
+アイデアがある人なら誰でも、画期的なアプリケーションを作ることができます。
+高速で効率の良い言語であるSwiftはリアルタイムのフィードバックを提供し、既存のObjective-Cコードにもシームレスに組み込めます。だからデベロッパのみなさんは、より安全で、より信頼性の高いコードを書くことができ、時間を節約しながら、より豊かなアプリケーション体験を生み出せます。</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ZbC-Ol-mVY" firstAttribute="leading" secondItem="ToY-YH-JDs" secondAttribute="leadingMargin" id="Me4-Nf-jue"/>
+                            <constraint firstItem="Wvz-WR-pZg" firstAttribute="leading" secondItem="ToY-YH-JDs" secondAttribute="leading" id="Mv1-9V-g21"/>
+                            <constraint firstItem="ROi-AP-toR" firstAttribute="top" secondItem="ZbC-Ol-mVY" secondAttribute="bottom" constant="8" symbolic="YES" id="PjA-Vj-G2J"/>
+                            <constraint firstItem="ZbC-Ol-mVY" firstAttribute="centerX" secondItem="ToY-YH-JDs" secondAttribute="centerX" id="ULS-Hv-flf"/>
+                            <constraint firstItem="ZbC-Ol-mVY" firstAttribute="centerX" secondItem="Wvz-WR-pZg" secondAttribute="centerX" id="ZzK-Zz-IdR"/>
+                            <constraint firstItem="ZbC-Ol-mVY" firstAttribute="top" secondItem="Wvz-WR-pZg" secondAttribute="bottom" id="ca6-Zh-q4k"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="5bP-Jp-ucp"/>
+                    <connections>
+                        <outlet property="myTextView" destination="ZbC-Ol-mVY" id="n4w-0c-EnM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YCj-9x-3Ne" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3" y="738"/>
+            <point key="canvasLocation" x="-4" y="737.18140929535241"/>
         </scene>
         <!--Second-->
         <scene sceneID="wg7-f3-ORb">
